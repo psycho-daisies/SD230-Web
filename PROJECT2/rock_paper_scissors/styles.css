@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    background: linear-gradient(90deg, #0B92DE 0%, #78EFE8 100%);
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 4em;
+    color: #ffffff;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 5px 0;
+    height: 1.5em;
+}
+
+.hand {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+/* Hands Container */
+.hands-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Base Hand Styles */
+.hand-rock-regular,
+.hand-scissors-regular,
+.hand-paper-regular {
+    fill: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+/* Hover Effect */
+.hand-rock-regular:hover,
+.hand-scissors-regular:hover,
+.hand-paper-regular:hover {
+    transform: scale(1.1);
+    fill: #0077cc;
+}
+
+/* Selected State */
+.hand-rock-regular.selected,
+.hand-scissors-regular.selected,
+.hand-paper-regular.selected {
+    animation: pulse 0.6s ease-in-out infinite;
+    fill: #ff6600;
+}
+
+/* Computer's selected choice */
+.hand-rock-regular.computer-selected,
+.hand-scissors-regular.computer-selected,
+.hand-paper-regular.computer-selected {
+    fill: #93158b;
+}
+
+/* Button Styles */
+button.rectangle-1 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 4px solid #ffffff;
+    background: rgba(254, 0, 183, 1);
+    font-family: 'Press Start 2P', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: transform 0.2s ease;
+}
+
+button.rectangle-1:hover {
+    background: rgba(254, 0, 183, 0.8);
+    transform: scale(1.05);
+}
+
+#score-display {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ffffff;
+}
